@@ -140,10 +140,15 @@ if [ "$advdesc" != "" ];then
 fi
 }
 
+InitSysServ(){
+chkconfig NetworkManager off >/dev/null 2>&1
+service NetworkManager stop >/dev/null 2>&1
+}
+
 case "$1" in
   start)
         echo -en "Starting NetworksServer:\t\t"
-	Networks
+        Networks
         RETVAL=$?
         #echo
         if [ $RETVAL -eq 0 ] ;then

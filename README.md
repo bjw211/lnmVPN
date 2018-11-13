@@ -1,9 +1,9 @@
 # 该项目应用于企业远程维护、应用访问、安全连接、路由跳转
 ### 客户端下载：https://pan.baidu.com/s/1xDAfspJdBEm9ilipT61PbQ 分享密码:vzfn
 
-## 安装步骤(仅针对centos/redhat发行版,其他版本自行测试)
+##安装步骤(仅针对centos/redhat发行版,其他版本自行测试)
 
-1. 安装初始化环境 python >=2.7 (推荐lnmos定制版本,可以在"客户端下载"中获取) <br>
+###1.安装初始化环境 python >=2.7 (推荐lnmos定制版本,可以在"客户端下载"中获取) <br>
 rpm -i python27-2.7.15-lnmos.rpm <br>
 export PATH=$PATH:/usr/local/python27/bin <br>
 安装pip工具 <br>
@@ -18,7 +18,7 @@ virtualenv -p /usr/local/python27/bin/python venv <br>
 进入virtualenv环境 <br>
 source venv/bin/activate <br>
 
-2. 安装程序运行模块 <br>
+###2.安装程序运行模块 <br>
 MySQL服务 <br>
 yum install -y mysql-server mysql-devel MySQL-Python <br>
 证书组件 <br>
@@ -29,12 +29,12 @@ yum install -y ocserv openconnect <br>
 安装Python程序扩展包 <br>
 pip install -r readme/requirements.txt <br>
 
-3. 创建数据库并恢复数据模版 <br>
+###3.创建数据库并恢复数据模版 <br>
 [创建数据库] <br>
 [恢复数据模版] <br>
 [配置数据库连接] vim config/config.ini <br>
 
-4. 正式运行程序 <br>
+###4.正式运行程序 <br>
 [程序调试]：python27 main.py <br>
 [后台运行]: startweb.sh restart <br>
 [前段访问]：https://IP地址:端口号 <br>

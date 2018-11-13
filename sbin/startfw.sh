@@ -25,6 +25,9 @@ sysctl -w "net.ipv4.ip_local_port_range=10000 65000" >/dev/null 2>&1
 sysctl -w "net.ipv4.tcp_max_syn_backlog=8192" >/dev/null 2>&1
 sysctl -w "net.ipv4.tcp_max_tw_buckets=5000" >/dev/null 2>&1
 
+# selinux
+sed -i "s/^SELINUX=.*/SELINUX=disabled/g" /etc/selinux/config >/dev/null 2>&1
+selinuxenabled 0 >/dev/null 2>&1
 
 ipset_stop(){
 ipset flush
