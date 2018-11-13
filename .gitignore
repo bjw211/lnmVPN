@@ -1,0 +1,9 @@
+Functions.py
+Network.py
+System.py
+*.swp
+*.sw
+*.log
+*.pid
+*.sock
+venv/*
